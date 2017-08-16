@@ -1,7 +1,7 @@
 (function() {
     function HomeCtrl(Room) {
     this.chatRooms = Room.all;
-    console.log(this.chatRooms);
+    console.log(this.chatRooms.length);
     
     
 
