@@ -3,11 +3,14 @@
      <div>
          <span></span>
          <h5>Home Rage</h5>
-         <h1 ng-repeat="room in home.chatRooms">{{room.$value}}</h1>
+         <button type="button" ng-click="home.addRoom()">New Room</button>>
+
+         <h1 ng-repeat="room in home.chatRooms">{{room.$id}}
+         <br>{{room.$value}}</h1>
 
 
      </div>
-     <div>
+<!--      <div>
          <span></span>
          <h5> titles</h5>
          <p>and sections</p>
@@ -16,5 +19,5 @@
          <span></span>
          <h5>more titles</h5>
          <p>more sections</p>
-     </div>
+     </div> -->
  </section>
