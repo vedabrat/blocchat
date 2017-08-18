@@ -3,10 +3,10 @@
      <div>
          <span></span>
          <h5>Home Rage</h5>
-         <button type="button" ng-click="home.addRoom()">New Room</button>>
+         <button type="button" ng-click="home.addRoom()">New Room</button>
 
          <h1 ng-repeat="room in home.chatRooms">{{room.$id}}
-         <br>{{room.$value}}</h1>
+         <br>{{room.$value}}{{room.name}}</h1>
 
 
      </div>
