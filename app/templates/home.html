@@ -1,23 +1,48 @@
 
- <section>
-     <div>
-         <span></span>
-         <h5>Home Rage</h5>
-         <button type="button" ng-click="home.addRoom()">New Room</button>
-
-         <h1 ng-repeat="room in home.chatRooms">{{room.$id}}
-         <br>{{room.$value}}{{room.name}}</h1>
-
-
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="navbar-nav navbar-sidenav">
+      <div class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <a class="nav-link" href="#">
+          <i class="fa fa-fw fa-dashboard"></i>
+          <span >
+            <section>
+             <div>
+                 <span></span>
+                 <h1>BlocChat Home Rage
+                   <button class=".card-body-icon" type="button" ng-click="home.addRoom()">New Room</button>
+                 </h1>
+                 <h3 class="nav-link-text" ng-repeat="room in home.chatRooms">
+                   <!-- <div>{{room.$value}}</div> -->
+                   <ul ng-click="home.setCurrentRoom(room)">{{room.name}}</ul>
+                 </h3>
+               </div>
+             </section>
+           </span>
+         </a>
+       </div>
      </div>
-<!--      <div>
-         <span></span>
-         <h5> titles</h5>
-         <p>and sections</p>
-     </div>
-     <div>
-         <span></span>
-         <h5>more titles</h5>
-         <p>more sections</p>
-     </div> -->
- </section>
+  </div>
+</nav>
+<div class="content-wrapper py-3">
+  <div class="container-fluid">
+    <!-- Breadcrumbs -->
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Dashboard</a>
+      </li>
+    </ul>
+      </div>
+        <div>
+         <div class="container-fluid">
+           <!-- Breadcrumbs -->
+           <ul class="breadcrumb">
+               <br class="breadcrumb-item">{{home.currentRoom.name}}</br>
+               <div ng-repeat="message in home.messages"> {{message.content}}</div>
+           </ul>
+         </div>
+       </div>
+      <div class="col-lg-4">
+  </div>
+</div>
