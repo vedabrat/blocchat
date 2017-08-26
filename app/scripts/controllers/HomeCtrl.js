@@ -1,7 +1,6 @@
 (function() {
     function HomeCtrl(Room, $uibModal, Message) {
     this.chatRooms = Room.all;
-    console.log(this.chatRooms.length);
 
     this.addRoom = function() {
 	     $uibModal.open({
@@ -15,12 +14,7 @@
         this.messages = Message.getByRoomId(room.$id);
         console.log (this.currentRoom);
         console.log (this.messages);
-
-
     }
-
-
-
 }
 
     angular

@@ -8,11 +8,8 @@
     Room.add = function(room) {
       rooms.$add(room);
     }
-
     return Room;
-
   }
-
 
   angular
     .module('blocChat')

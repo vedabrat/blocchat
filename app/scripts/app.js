@@ -5,7 +5,7 @@
                  enabled: true,
                  requireBase: false
               });
- 
+
          $stateProvider
              .state('home', {
                  url: '/',
@@ -13,13 +13,8 @@
                  templateUrl: '/templates/home.html',
                  scope: {}
              })
-         /*    .state('rooms', {
-                 controller: 'Room as rooms',
-                 templateUrl: '/templates/home.html'
-
-             })*/
      }
-     
+
      angular
          .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
          .config(config);
