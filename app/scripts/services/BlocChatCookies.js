@@ -11,9 +11,9 @@
     console.log(currentUser === '');
     if (!currentUser || currentUser === '') {
 
-          currentUserS = prompt("What is your username");
-          while (currentUser.username = null){}
-            prompt("give me a username. if you dont this box will never leave")
+          currentUser.username = prompt("What is your username");
+    //       while (currentUser.username = null){}
+    //         prompt("give me a username. if you dont this box will never leave")
     }
     $cookieStore(currentUser);
     console.log($cookies.get(blocChatCurrentUser));
