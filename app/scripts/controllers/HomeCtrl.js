@@ -8,14 +8,14 @@
 	         size: 'sm',
 	         controller: 'ModalCtrl as modal'
 	     });
-	}
+	  }
     this.setCurrentRoom = function (room){
         this.currentRoom = room;
         this.messages = Message.getByRoomId(room.$id);
-        console.log (this.currentRoom);
-        console.log (this.messages);
+        // console.log (this.currentRoom);
+        // console.log (this.messages);
+        }
     }
-}
 
     angular
         .module('blocChat')
