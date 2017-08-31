@@ -11,7 +11,7 @@
     console.log(currentUser === '');
     // if (!currentUser || currentUser === '') {
 
-          // currentUser.username = prompt("What is your username");
+          currentUser = prompt("What is your username");
     //       while (currentUser.username = null){}
     //         prompt("give me a username. if you dont this box will never leave")
     // }
