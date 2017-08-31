@@ -9,14 +9,14 @@
     console.log($cookies.get('blocChatCurrentUser'));
     console.log(!currentUser);
     console.log(currentUser === '');
-    if (!currentUser || currentUser === '') {
+    // if (!currentUser || currentUser === '') {
 
-          currentUser.username = prompt("What is your username");
+          // currentUser.username = prompt("What is your username");
     //       while (currentUser.username = null){}
     //         prompt("give me a username. if you dont this box will never leave")
-    }
-    $cookieStore(currentUser);
-    console.log($cookies.get(blocChatCurrentUser));
+    // }
+    // $cookieStore(currentUser);
+    // console.log($cookies.get(blocChatCurrentUser));
     // if (username = '')
 
     }
