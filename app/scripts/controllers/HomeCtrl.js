@@ -9,6 +9,13 @@
 	         controller: 'ModalCtrl as modal'
 	     });
 	  }
+    this.addUser = function() {
+	     $uibModal.open({
+	         templateUrl: '/templates/usermodal.html',
+	         size: 'sm',
+	         controller: 'ModalCtrl as modal'
+	     });
+	  }
     this.setCurrentRoom = function (room){
         this.currentRoom = room;
         this.messages = Message.getByRoomId(room.$id);
@@ -16,6 +23,7 @@
         // console.log (this.messages);
         }
     }
+
 
     angular
         .module('blocChat')
