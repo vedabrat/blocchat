@@ -10,10 +10,14 @@
             <section>
              <div>
                  <span></span>
-                 <h1>BlocChat Home Rage
-                   <button class=".card-body-icon" type="button" ng-click="home.addRoom()">New Room</button>
-                   <button class=".card-body-icon" type="button" ng-click="home.addUser()">Edit Username</button>
-                 </h1>
+                 <h1>BlocChat Home Rage                 </h1>
+                    <div>
+                      <button class=".card-body-icon" type="button" ng-click="home.addRoom()">New Room</button>
+                    </div>
+                    <div>
+                      <button class=".card-body-icon" type="button" ng-click="home.addUser()">Edit Username</button>
+                    </div>
+
                  <h3 class="nav-link-text" ng-repeat="room in home.chatRooms">
                    <!-- <div>{{room.$value}}</div> -->
                    <ul ng-click="home.setCurrentRoom(room)">{{room.name}}</ul>
