@@ -1,5 +1,5 @@
 (function() {
-     function ModalCtrl(Room, $uibModalInstance, $cookies) {
+     function ModalCtrl(Room, $uibModalInstance, $cookies, currentUser) {
          this.cancel = function () {
              $uibModalInstance.dismiss();
          };
@@ -9,8 +9,13 @@
              $uibModalInstance.close();
          };
          this.setUsername = function (currentUser) {
-            $cookies.put('blocChatCurrentUser', currentUser);
-            $uibModalInstance.close();
+
+            if(currentUser == null){
+              alert("In order to use Blocchat, you must enter a valid username")
+            }else{
+                $cookies.put('blocChatCurrentUser', currentUser);
+                $uibModalInstance.close();
+              }
          };
      }
 
