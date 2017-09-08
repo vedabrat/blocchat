@@ -37,11 +37,13 @@
     </ul>
       </div>
         <div>
-         <div class="container-fluid">
-           <!-- Breadcrumbs -->
-           <ul class="breadcrumb">
-               <br class="breadcrumb-item">{{home.currentRoom.name}}</br>
-               <div ng-repeat="message in home.messages"> {{message.content}}</div>
+          <div class="container-fluid">
+            <!-- Breadcrumbs -->
+            <ul class="breadcrumb">
+              <br class="breadcrumb-item">{{home.currentRoom.name}}</br>
+              <div ng-repeat="message in home.messages"> {{message.content}}</div>
+              <input ng-model="newMessage"></input>
+              <button class=".card-body-icon" type="button" ng-click="home.addMessage(newMessage)">Send</button>
            </ul>
          </div>
        </div>
