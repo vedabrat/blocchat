@@ -9,7 +9,13 @@
              return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
          }
          Message.send = function(newMessage) {
-            messages.$add(newMessage);
+            messages.$add({
+					content: newMessage,
+					user: $cookies.get('blocChatCurrentUser'),
+					time: Date.now(),
+					room: "-KsF__-Dt9noEOMMsQzo"
+					});;
+            console.log(newMessage);
          };
          console.log(Message);
 
@@ -18,5 +24,5 @@
 
      angular
          .module('blocChat')
-         .factory('Message', ['$firebaseArray', Message, $cookies]);
+         .factory('Message', ['$firebaseArray', '$cookies', Message]);
  })();
